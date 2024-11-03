@@ -1,5 +1,5 @@
 # Pump Toolset
-An open-source extension that aims to improve various aspects of the popular trading site pump.fun
+An open-source extension that aims to improve various aspects of the popular Solana trading site pump.fun
 
   * Currently only available for Chrome based browsers.
 
