@@ -5,11 +5,11 @@ An open-source extension that aims to improve various aspects of the popular Sol
 
 💎 **Features**
 
-  * Website Optimization - Improves load times and reduces overall system usage
-  * Reduce Gas Fees - Lowers fees while creating tokens when possible
-  * Photon Redirect - Auto-redirects to your coin's Photon chart upon creation
-  * Auto Expand - Automatically expands the 'Show more options' menu
-  * Templates - Create templates to autofill token settings for creation
+  * **Website Optimization** - Improves load times and reduces overall system usage
+  * **Reduce Gas Fees** - Lowers fees while creating tokens when possible
+  * **Photon Redirect** - Auto-redirects to your coin's Photon chart upon creation
+  * **Auto Expand** - Automatically expands the 'Show more options' menu
+  * **Templates** - Create templates to autofill token settings for creation
 
 ⚙️ **How to Install**
 
