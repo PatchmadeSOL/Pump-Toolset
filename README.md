@@ -3,6 +3,7 @@ An open-source extension that aims to improve various aspects of the popular Sol
 
 *Currently only available for Chrome based browsers, extension is being ported to Manifest V3*
 
+
 💎 **Features**
 
   * **Website Optimization** - Improves load times and reduces overall system usage
@@ -11,11 +12,13 @@ An open-source extension that aims to improve various aspects of the popular Sol
   * **Auto Expand** - Automatically expands the 'Show more options' menu
   * **Templates** - Create templates to autofill token settings for creation
 
+
 ⚙️ **How to Install**
 
   1. Enable Developer Mode on your browser’s extension page
   2. Unzip the repository files, so they are within a folder on your system
   3. Import the extension by selecting Load unpacked, and select the folder
+
 
 🛠️ **Troubleshooting**
 
@@ -28,6 +31,7 @@ Due to Chrome recently depending on Manifest V3, the manifest.json file may be i
   4. Restart your browser, and reinstall the extension again
 
 If you are experiencing any problems with the extension, please open an issue on GitHub to report it.
+
 
 💙 **Donations**
 
