@@ -30,4 +30,5 @@ Due to Chrome recently depending on Manifest V3, the manifest.json file may be i
 If you are experiencing any problems with the extension, please open an issue on GitHub to report it.
 
 💙 **Donations**
-SOL: 6m5xDmDL5AxjMLYFDWs4QyG3uV1EzXdABjwQmA3Cx1ag
+
+**SOL:** 6m5xDmDL5AxjMLYFDWs4QyG3uV1EzXdABjwQmA3Cx1ag
