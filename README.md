@@ -30,7 +30,7 @@ Due to Chrome recently depending on Manifest V3, the manifest.json file may be i
   3. Uninstall the current imported extension if it is currently installed from your browser’s Extensions page
   4. Restart your browser, and reinstall the extension again
 
-If you are experiencing any problems with the extension, please open an issue on GitHub to report it.
+If you are experiencing any problems with the extension, please open an issue to report it.
 
 
 💙 **Donations**
