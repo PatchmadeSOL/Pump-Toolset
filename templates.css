@@ -1,0 +1,66 @@
+#extension-templates-section {
+    position: fixed;
+    top: 10%;
+    right: 30%;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 10px;
+    border-radius: 8px;
+    width: 160px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#extension-templates-section h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#extension-templates-section .template-card {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#extension-templates-section .template-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#extension-templates-section .template-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#extension-templates-section .template-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#extension-templates-section .template-image-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+#templates-container p {
+    color: #fff;
+}
