@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Pump Toolset",
   "version": "1.2",
   "description": "Additional tools to aid in coin creation on pump.fun",
@@ -14,7 +14,7 @@
       "16": "img/icon16.png",
       "48": "img/icon48.png"
     },
-    "default_popup": "ui/index.html"
+    "default_popup": "ui/ui.html"
   },
   "permissions": [
     "scripting",
@@ -31,8 +31,7 @@
     },
     {
       "matches": ["*://pump.fun/create*"],
-      "js": ["templates.js", "auto-expand.js"],
-      "css": ["templates.css"]
+      "js": ["templates.js", "auto-expand.js"]
     }
   ]
 }
