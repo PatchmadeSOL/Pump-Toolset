@@ -26,7 +26,7 @@ Due to Chrome recently depending on Manifest V3, the manifest.json file may be i
 
 **Rebuilding for Manifest V3 Support**
   1. Install Python 3.10.11 (https://www.python.org/downloads/release/python-31011/)
-  2. Rebuild the extension by running (build.py) within the extension folder 
+  2. Rebuild the extension by running build.py within the extension folder 
   3. Uninstall the current imported extension if it is currently installed from your browser’s Extensions page
   4. Restart your browser, and reinstall the extension again
 
