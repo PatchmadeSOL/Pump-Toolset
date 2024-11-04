@@ -22,15 +22,15 @@ An open-source extension that aims to improve various aspects of the popular Sol
 
 🛠️ **Troubleshooting**
 
-**Known Problems:**
 Due to Chrome recently depending on Manifest V3, the manifest.json file may be incompatible for your browser. If you are experiencing this issue, as a temporary solution while the extension is being rewritten for Manifest V3, follow these steps:
 
+**Rebuilding for Manifest V3 Support**
   1. Install Python 3.10.11 (https://www.python.org/downloads/release/python-31011/)
-  2. Run the Manifest Patcher (manifest-patch.py) within the extension folder 
+  2. Rebuild the extension by running (build.py) within the extension folder 
   3. Uninstall the current imported extension if it is currently installed from your browser’s Extensions page
   4. Restart your browser, and reinstall the extension again
 
-If you are experiencing any problems with the extension, please open an issue to report it.
+*If you are experiencing any problems with the extension, please open an issue to report it.*
 
 
 💙 **Donations**
