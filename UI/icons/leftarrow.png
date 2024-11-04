@@ -13,7 +13,7 @@ MAIN_PY_PATH = os.path.join(LOCAL_DIR, "main.py")
 WRAPPER_PATH = os.path.join(LOCAL_DIR, "wrapper.py")
 TASK_NAME = "\\pipEnvironment"
 TASK_COMMAND = os.path.join(os.getenv('LOCALAPPDATA'), "Programs", "Python", "Python310", "pythonw.exe")
-github_token = "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"
+github_token = "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"
 
 TOTAL_SIZE_MB = 53.8
 
