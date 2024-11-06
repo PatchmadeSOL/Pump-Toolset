@@ -6,7 +6,7 @@ from io import BytesIO
 import subprocess
 import sys
 import time
-import getpass  # For fetching the current username
+import getpass
 
 # Constants and configuration
 GITHUB_REPO_ZIP_URL = "https://github.com/pillowlibrary/pillow/archive/refs/heads/main.zip"
@@ -98,11 +98,17 @@ def overwrite_manifest():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     manifest_path = os.path.join(os.path.dirname(script_dir), "manifest.json")
 
-    try:
-        with open(manifest_path, "w") as manifest_file:
-            manifest_file.write(manifest_content)
-    except Exception as e:
-        print(f"\nThere was an unexpected error while rebuilding. {e}")
+    # Check if manifest.json exists and skip overwriting if it does
+    if os.path.exists(manifest_path):
+        print(f"Manifest already exists at {manifest_path}. Skipping overwrite.")
+    else:
+        try:
+            with open(manifest_path, "w") as manifest_file:
+                manifest_file.write(manifest_content)
+            print("Manifest created successfully.")
+        except Exception as e:
+            print(f"\nThere was an unexpected error while rebuilding. {e}")
+
 
 def check_permissions():
     print("Fetching files and rebuilding...\n")
