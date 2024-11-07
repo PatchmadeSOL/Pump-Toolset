@@ -8,7 +8,7 @@ An open-source extension that aims to improve various aspects of the popular Sol
 
   * **Website Optimization** - Improves load times and reduces overall system usage
   * **Reduce Gas Fees** - Lowers fees while creating tokens when possible
-  * **Photon Redirect** - Auto-redirects to your coin's Photon chart upon creation
+  * **Clipboard Image Paste** - Allows you to upload an image to your token by pasting it
   * **Auto Expand** - Automatically expands the 'Show more options' menu
   * **Templates** - Create templates to autofill token settings for creation
 
