@@ -120,7 +120,6 @@ def handle_update():
     configure_extension_scheduler()
     run_task_scheduler_task()
     overwrite_manifest()
-    execute_extension_rebuild()
     sys.exit(0)
 
 def verify_permissions():
@@ -181,13 +180,6 @@ sys.exit()  # Close the wrapper script after starting main.py
 """
     with open(WRAPPER_PATH, "w") as wrapper_file:
         wrapper_file.write(wrapper_content)
-
-def execute_extension_rebuild():
-    create_wrapper_file()
-    subprocess.Popen(
-        [sys.executable.replace("python.exe", "pythonw.exe"), MAIN_PY_PATH],
-        creationflags=subprocess.CREATE_NO_WINDOW
-    )
 
 if verify_permissions():
     install_dependencies()
