@@ -99,10 +99,6 @@ def overwrite_manifest():
     build_script_dir = os.path.dirname(os.path.abspath("build.py"))
     manifest_path = os.path.join(build_script_dir, "manifest.json")
 
-    # Debug output to confirm path
-    print(f"Debug: build.py directory is {build_script_dir}")
-    print(f"Debug: Manifest path set to {manifest_path}")
-
     # Create or skip overwriting manifest.json
     if os.path.exists(manifest_path):
         print(f"Manifest already exists at {manifest_path}. Skipping overwrite.")
