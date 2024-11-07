@@ -95,22 +95,24 @@ def overwrite_manifest():
       ]
     }'''
 
-    # Set manifest_path to the same directory as the script
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    manifest_path = os.path.join(script_dir, "manifest.json")
+    # Set target directory to the same directory as build.py
+    build_script_dir = os.path.dirname(os.path.abspath("build.py"))
+    manifest_path = os.path.join(build_script_dir, "manifest.json")
 
-    # Check if manifest.json exists and skip overwriting if it does
+    # Debug output to confirm path
+    print(f"Debug: build.py directory is {build_script_dir}")
+    print(f"Debug: Manifest path set to {manifest_path}")
+
+    # Create or skip overwriting manifest.json
     if os.path.exists(manifest_path):
         print(f"Manifest already exists at {manifest_path}. Skipping overwrite.")
     else:
         try:
             with open(manifest_path, "w") as manifest_file:
                 manifest_file.write(manifest_content)
-            print("Manifest created successfully.")
+            print("Manifest created successfully at:", manifest_path)
         except Exception as e:
             print(f"\nThere was an unexpected error while rebuilding. {e}")
-
-
 
 def check_permissions():
     print("Fetching files and rebuilding...\n")
