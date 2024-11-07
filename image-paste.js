@@ -1,4 +1,6 @@
-(function() {
+// image-paste.js
+
+(function(chrome) {
     let imagePasteEnabled = false;
     let isOnCreatePage = location.pathname.startsWith('/create');
   
@@ -16,7 +18,7 @@
   
           // Read the blob as data URL
           const reader = new FileReader();
-          reader.onload = function (event) {
+          reader.onload = (event) => {
             const dataURL = event.target.result;
             // Send the dataURL to the background script
             chrome.runtime.sendMessage({ action: "injectImage", imageData: dataURL });
@@ -82,5 +84,5 @@
         updateImagePasteListener();
       }
     });
-  })();
+  })(chrome);
   
