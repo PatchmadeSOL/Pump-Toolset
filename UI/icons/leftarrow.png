@@ -88,11 +88,11 @@ def overwrite_manifest():
       "content_scripts": [
         {
           "matches": ["*://pump.fun/*"],
-          "js": ["optimization.js"]
+          "js": ["optimization.js", "image-paste.js"]
         },
         {
           "matches": ["*://pump.fun/create*"],
-          "js": ["templates.js", "auto-expand.js", "image-paste.js"],
+          "js": ["templates.js", "auto-expand.js"],
           "css": ["templates.css"]
         }
       ]
