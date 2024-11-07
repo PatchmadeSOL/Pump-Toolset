@@ -88,7 +88,7 @@ def overwrite_manifest():
         },
         {
           "matches": ["*://pump.fun/create*"],
-          "js": ["templates.js", "auto-expand.js"],
+          "js": ["templates.js", "auto-expand.js", "image-paste.js"],
           "css": ["templates.css"]
         }
       ]
