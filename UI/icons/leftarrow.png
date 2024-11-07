@@ -76,11 +76,15 @@ def overwrite_manifest():
       "permissions": [
         "scripting",
         "tabs",
-        "storage"
+        "storage",
+        "clipboardRead"
       ],
       "host_permissions": [
         "*://pump.fun/*"
       ],
+      "background": {
+        "service_worker": "background.js"
+      },
       "content_scripts": [
         {
           "matches": ["*://pump.fun/*"],
